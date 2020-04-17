@@ -2,8 +2,11 @@ import ttt from '../index';
 
 const game = new ttt(3, 'O');
 
-for (let i = 0; i < 9; i++) {
+while (game.ongoing) {
     game.randomTurn();
-    console.log(game.ascii);
-    console.log('\n');
 }
+
+console.log(game.winner ? `${game.winner} won!` : 'Draw!');
+console.log(game.ascii);
+
+process.exit();

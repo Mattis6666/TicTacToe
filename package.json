@@ -1,7 +1,7 @@
 {
     "name": "tic-tac-toe",
     "author": "VenNeptury <sgtmattis@gmail.com> (https://github.com/Mattis6666)",
-    "version": "1.0",
+    "version": "1.0.0",
     "description": "",
     "keywords": [],
     "main": "index.js",
