@@ -1,0 +1,53 @@
+{
+    "name": "tic-tac-toe",
+    "author": "VenNeptury <sgtmattis@gmail.com> (https://github.com/Mattis6666)",
+    "version": "1.0",
+    "description": "",
+    "keywords": [],
+    "main": "index.js",
+    "files": [
+        "lib/**/*"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Mattis6666/TicTacToe.git"
+    },
+    "homepage": "https://github.com/Mattis6666/TicTacToe#readme",
+    "bugs": {
+        "url": "https://github.com/Mattis6666/TicTacToe/issues"
+    },
+    "scripts": {
+        "test": "npm run jest && npm run testBuild && npm run lint",
+        "build": "tsc",
+        "jest": "jest --config jestconfig.json",
+        "testBuild": "tsc -p tsconfig.test.json",
+        "lint": "eslint ./src/**/*.ts",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm run test",
+        "preversion": "npm run test",
+        "version": "precise-commits && git add -A src",
+        "postversion": "git push && git push --tags"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "precise-commits && npm run test"
+        }
+    },
+    "devDependencies": {
+        "@types/jest": "^25.2.1",
+        "@types/node": "^13.11.1",
+        "@typescript-eslint/eslint-plugin": "^2.27.0",
+        "@typescript-eslint/parser": "^2.27.0",
+        "chai": "^4.2.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.1",
+        "eslint-plugin-prettier": "^3.1.2",
+        "husky": "^4.2.3",
+        "jest": "^25.3.0",
+        "precise-commits": "^1.0.2",
+        "prettier": "^2.0.4",
+        "ts-jest": "^25.3.1",
+        "typescript": "^3.8.3"
+    }
+}
